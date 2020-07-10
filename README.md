@@ -1,6 +1,8 @@
 # pycontracts-experiments
 
-Experiments on PyContracts
+Experiments on PyContracts.
+
+ドキュメント: http://andreacensi.github.io/contracts/
 
 ## Setup
 
@@ -72,4 +74,12 @@ checking: N+2         for value: Instance of <class 'int'>: 4
 checking: list[N+2]   for value: Instance of <class 'list'>: [3, 2, 1, 4]   
 Variables bound in inner context:
 - N: Instance of <class 'int'>: 3
+```
+
+## Existencial binding
+
+値変数が使えて、existential に束縛される。例: 
+
+```python
+@contract(m: 'array[L x M]', n: 'array[M x N]', returns: 'array[L x N]')
 ```
